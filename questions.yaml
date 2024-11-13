@@ -1,0 +1,510 @@
+questions:
+- answer: A
+  options:
+  - A. Provisioning infrastructure
+  - B. Monitoring applications
+  - C. Managing application code
+  - D. Deploying container images
+  question: What is the primary purpose of Terraform?
+- answer: C
+  options:
+  - A. terraform apply
+  - B. terraform plan
+  - C. terraform init
+  - D. terraform destroy
+  question: Which Terraform command is used to initialize a working directory?
+- answer: B
+  options:
+  - A. By performing automatic corrections
+  - B. By detecting and alerting drift during 'terraform plan'
+  - C. By re-provisioning all resources
+  - D. By ignoring the drift
+  question: How does Terraform handle infrastructure drift?
+- answer: B
+  options:
+  - A. A tool for monitoring infrastructure
+  - B. A plugin for interacting with APIs
+  - C. A container image for running applications
+  - D. A service for managing data pipelines
+  question: What is a 'provider' in Terraform?
+
+- answer: B
+  options:
+  - A. Simplifies configuration syntax
+  - B. Enhances collaboration by storing state remotely and enabling state locking
+  - C. Reduces the need for provider plugins
+  - D. Automatically generates resource documentation
+  question: What is the primary benefit of using a remote backend in Terraform?
+
+- answer: A
+  options:
+  - A. Encrypts sensitive data at rest and in transit
+  - B. Stores sensitive data in plain text for easy access
+  - C. Omits sensitive data from the state file entirely
+  - D. Requires manual encryption of sensitive data by the user
+  question: How does Terraform handle sensitive information in the state file when using a remote backend?
+
+- answer: A
+  options:
+  - A. To prevent multiple users from making concurrent changes that could corrupt the state
+  - B. To encrypt the state file
+  - C. To enable version control of the state file
+  - D. To automate the application of infrastructure changes
+  question: What is the purpose of state locking in Terraform?
+
+- answer: C
+  options:
+  - A. terraform plan
+  - B. terraform apply
+  - C. terraform refresh
+  - D. terraform init
+  question: Which command is used to reconcile the Terraform state with the real-world infrastructure?
+
+- answer: B
+  options:
+  - A. Modify the provider configuration
+  - B. Remove the backend configuration block and run terraform init again
+  - C. Delete the .terraform directory
+  - D. Manually edit the state file
+  question: If you want to switch from using a remote backend to a local backend, what should you do?
+
+- answer: A
+  options:
+  - A. It can lead to multiple writers and potential state corruption
+  - B. It permanently deletes the state file
+  - C. It disables state locking for all future operations
+  - D. It requires reinitialization of the backend
+  question: What is a potential risk of using the force-unlock command in Terraform?
+
+- answer: A
+  options:
+  - A. Use a backend that supports encryption at rest and in transit
+  - B. Store the state file in a version control system
+  - C. Manually remove sensitive data from the state file
+  - D. Use the -sensitive flag when running Terraform commands
+  question: How can you ensure that sensitive data is not stored in plain text in the Terraform state file?
+
+- answer: B
+  options:
+  - A. Terraform will continue the operation without locking
+  - B. Terraform will not continue and will prompt an error
+  - C. Terraform will automatically retry the operation
+  - D. Terraform will switch to a local backend
+  question: What happens if state locking fails during a Terraform operation?
+
+- answer: A
+  options:
+  - A. A standalone configuration that manages a specific set of resources
+  - B. A command-line tool for applying configurations
+  - C. A graphical interface for managing infrastructure
+  - D. A cloud service for storing state files
+  question: What is a Terraform module?
+
+- answer: B
+  options:
+  - A. By specifying the module's URL in the provider block
+  - B. By using the 'module' block with the 'source' attribute pointing to the module's registry address
+  - C. By importing the module using the 'terraform import' command
+  - D. By copying the module's code into your configuration directory
+  question: How can you source a module from the Terraform Registry?
+
+- answer: C
+  options:
+  - A. terraform plan
+  - B. terraform apply
+  - C. terraform init
+  - D. terraform validate
+  question: Which command initializes the modules in your configuration?
+
+- answer: A
+  options:
+  - A. To define input variables for the module
+  - B. To output values from the module
+  - C. To configure backend settings
+  - D. To specify provider requirements
+  question: What is the purpose of the 'variables.tf' file in a module?
+
+- answer: C
+  options:
+  - A. By defining them in the 'provider' block
+  - B. By using the 'variable' block within the module
+  - C. By specifying them as arguments in the 'module' block
+  - D. By setting environment variables
+  question: How do you pass variables to a module?
+
+- answer: C
+  options:
+  - A. To define the resources managed by the module
+  - B. To specify the module's dependencies
+  - C. To declare the outputs that can be used by other configurations
+  - D. To set default values for variables
+  question: What is the function of the 'outputs.tf' file in a module?
+
+- answer: A
+  options:
+  - A. By referencing its path in the 'source' attribute of the 'module' block
+  - B. By copying its code into your main configuration file
+  - C. By importing it using the 'terraform import' command
+  - D. By specifying its URL in the 'provider' block
+  question: How can you use a local module in your Terraform configuration?
+
+- answer: A
+  options:
+  - A. They allow for code reusability and organization
+  - B. They enable automatic scaling of resources
+  - C. They provide a graphical interface for configuration
+  - D. They eliminate the need for state files
+  question: What is the benefit of using modules in Terraform?
+
+- answer: A
+  options:
+  - A. Write, Plan, Apply
+  - B. Plan, Write, Apply
+  - C. Apply, Plan, Write
+  - D. Write, Apply, Plan
+  question: What is the correct order of the core Terraform workflow?
+
+- answer: C
+  options:
+  - A. terraform plan
+  - B. terraform apply
+  - C. terraform init
+  - D. terraform destroy
+  question: Which Terraform command initializes a working directory containing configuration files?
+
+- answer: B
+  options:
+  - A. terraform plan
+  - B. terraform validate
+  - C. terraform apply
+  - D. terraform destroy
+  question: Which command checks the syntax and internal consistency of a Terraform configuration?
+
+- answer: A
+  options:
+  - A. terraform plan
+  - B. terraform init
+  - C. terraform validate
+  - D. terraform destroy
+  question: Which command creates an execution plan, showing what actions Terraform will take?
+
+- answer: C
+  options:
+  - A. terraform plan
+  - B. terraform validate
+  - C. terraform apply
+  - D. terraform destroy
+  question: Which command executes the actions proposed in a Terraform plan?
+
+- answer: D
+  options:
+  - A. terraform plan
+  - B. terraform validate
+  - C. terraform apply
+  - D. terraform destroy
+  question: Which command is used to remove Terraform-managed infrastructure?
+
+- answer: B
+  options:
+  - A. terraform plan
+  - B. terraform refresh
+  - C. terraform apply
+  - D. terraform destroy
+  question: Which command updates the state file with the real infrastructure?
+
+- answer: A
+  options:
+  - A. terraform show
+  - B. terraform init
+  - C. terraform validate
+  - D. terraform destroy
+  question: Which command provides a human-readable output from a state or plan file?
+
+- answer: A
+  options:
+  - A. variable "region" { description = "Cloud location" type = string default = "Australia Southeast" }
+  - B. var.region
+  - C. terraform apply -var 'region=us-east-1'
+  - D. TF_VAR_region
+  question: How do you define a variable in Terraform?
+
+- answer: B
+  options:
+  - A. variable "region" { description = "Cloud location" type = string default = "Australia Southeast" }
+  - B. var.region
+  - C. terraform apply -var 'region=us-east-1'
+  - D. TF_VAR_region
+  question: How do you access a variable in the configuration?
+
+- answer: C
+  options:
+  - A. variable "region" { description = "Cloud location" type = string default = "Australia Southeast" }
+  - B. var.region
+  - C. terraform apply -var 'region=us-east-1'
+  - D. TF_VAR_region
+  question: How can you assign variables in the configuration using command-line flags?
+
+- answer: D
+  options:
+  - A. variable "region" { description = "Cloud location" type = string default = "Australia Southeast" }
+  - B. var.region
+  - C. terraform apply -var 'region=us-east-1'
+  - D. TF_VAR_region
+  question: How can you assign variables in the configuration using environment variables?
+
+- answer: B
+  options:
+  - A. Command-line flags
+  - B. Environment variables
+  - C. Variable definition files
+  - D. All of the above
+  question: What is the variable definition precedence in Terraform?
+
+- answer: A
+  options:
+  - A. Writing and executing code to define, deploy, update, and destroy infrastructure
+  - B. Manually configuring servers and network devices
+  - C. Using a graphical interface to manage infrastructure
+  - D. Outsourcing infrastructure management to third-party vendors
+  question: What is Infrastructure as Code (IaC)?
+
+- answer: D
+  options:
+  - A. Automation
+  - B. Reusability of code
+  - C. Versioning
+  - D. All of the above
+  question: What are the benefits of IaC?
+
+- answer: A
+  options:
+  - A. It allows for provisioning and applying infrastructure configurations, saving time
+  - B. It requires manual configuration of each resource
+  - C. It is only compatible with a single cloud provider
+  - D. It does not support version control
+  question: How does using IaC make it easier to provision infrastructure?
+
+- answer: B
+  options:
+  - A. The ability to execute code multiple times with different outcomes
+  - B. The characteristic where applying the same code multiple times yields the same result
+  - C. The need to manually adjust configurations after each deployment
+  - D. The requirement to use different code for each deployment
+  question: What does 'idempotent' mean in terms of IaC?
+
+
+- answer: A
+  options:
+  - A. A SaaS offering that provides collaboration and governance features for Terraform users
+  - B. A command-line tool for managing infrastructure
+  - C. A plugin for integrating Terraform with cloud providers
+  - D. A desktop application for designing infrastructure diagrams
+  question: What is Terraform Cloud?
+
+- answer: B
+  options:
+  - A. A self-hosted version of Terraform Cloud with additional enterprise features
+  - B. A command-line tool for managing infrastructure
+  - C. A plugin for integrating Terraform with cloud providers
+  - D. A desktop application for designing infrastructure diagrams
+  question: What is Terraform Enterprise?
+
+- answer: D
+  options:
+  - A. Remote state management
+  - B. Policy as code with Sentinel
+  - C. Private module registry
+  - D. All of the above
+  question: Which features are available in both Terraform Cloud and Terraform Enterprise?
+
+- answer: A
+  options:
+  - A. Single sign-on (SSO) integration
+  - B. Remote state management
+  - C. Policy as code with Sentinel
+  - D. Private module registry
+  question: Which feature is exclusive to Terraform Enterprise?
+
+- answer: C
+  options:
+  - A. Remote state management
+  - B. Policy as code with Sentinel
+  - C. Self-hosted deployment
+  - D. Private module registry
+  question: Which feature is exclusive to Terraform Enterprise?
+
+- answer: B
+  options:
+  - A. Remote state management
+  - B. Policy as code with Sentinel
+  - C. Private module registry
+  - D. All of the above
+  question: Which features are available in bo
+
+- answer: A
+  options:
+  - A. A declarative tool for defining and provisioning infrastructure
+  - B. A scripting language for automating server configurations
+  - C. A monitoring tool for cloud resources
+  - D. A database management system
+  question: What is Terraform?
+
+- answer: B
+  options:
+  - A. An imperative programming language
+  - B. A declarative configuration language
+  - C. A markup language
+  - D. A compiled programming language
+  question: What type of language is HashiCorp Configuration Language (HCL)?
+
+- answer: C
+  options:
+  - A. terraform plan
+  - B. terraform apply
+  - C. terraform init
+  - D. terraform destroy
+  question: Which command initializes a working directory containing Terraform configuration files?
+
+- answer: A
+  options:
+  - A. terraform plan
+  - B. terraform apply
+  - C. terraform init
+  - D. terraform destroy
+  question: Which command creates an execution plan, showing what actions Terraform will take?
+
+- answer: B
+  options:
+  - A. terraform plan
+  - B. terraform apply
+  - C. terraform init
+  - D. terraform destroy
+  question: Which command executes the actions proposed in a Terraform plan?
+
+- answer: D
+  options:
+  - A. terraform plan
+  - B. terraform apply
+  - C. terraform init
+  - D. terraform destroy
+  question: Which command is used to remove Terraform-managed infrastructure?
+
+- answer: A
+  options:
+  - A. Providers
+  - B. Modules
+  - C. Resources
+  - D. Variables
+  question: In Terraform, what is responsible for understanding API interactions and exposing resources?
+
+- answer: C
+  options:
+  - A. Providers
+  - B. Modules
+  - C. Resources
+  - D. Variables
+  question: In Terraform, what is the primary construct that defines one or more infrastructure objects?
+
+- answer: A
+  options:
+  - A. Provisioning your infrastructure into multiple cloud providers to increase fault-tolerance of your applications
+  - B. Using a single cloud provider to manage all infrastructure
+  - C. Deploying applications without any cloud infrastructure
+  - D. Utilizing on-premises servers exclusively
+  question: What is multi-cloud deployment?
+
+- answer: A
+  options:
+  - A. It allows a single configuration to be used to manage multiple providers and handle cross-cloud dependencies
+  - B. It restricts configurations to a single cloud provider
+  - C. It requires manual adjustments for each cloud provider
+  - D. It is incompatible with hybrid cloud environments
+  question: What does 'cloud-agnostic' mean in terms of provisioning tools?
+
+- answer: A
+  options:
+  - A. Yes
+  - B. No
+  - C. Only with specific plugins
+  - D. Only in certain regions
+  question: Is Terraform cloud-agnostic?
+
+- answer: A
+  options:
+  - A. It simplifies management and orchestration, helping operators build large-scale multi-cloud infrastructures
+  - B. It limits deployment to a single cloud provider
+  - C. It complicates cross-cloud management
+  - D. It requires separate configurations for each provider
+  question: What is the benefit of Terraform being cloud-agnostic?
+
+- answer: A
+  options:
+  - A. A file that records information about what infrastructure Terraform created
+  - B. A script that automates Terraform commands
+  - C. A log of user activities within Terraform
+  - D. A backup of the Terraform configuration files
+  question: What is the Terraform State?
+
+- answer: A
+  options:
+  - A. Mapping Terraform configurations to real-world resources
+  - B. Storing user credentials for cloud providers
+  - C. Logging errors during Terraform execution
+  - D. Managing Terraform plugins
+  question: What is the purpose of the Terraform State?
+
+- answer: A
+  options:
+  - A. terraform.tfstate
+  - B. terraform.statefile
+  - C. terraform.config
+  - D. terraform.log
+  question: What is the default name of the Terraform state file?
+
+- answer: A
+  options:
+  - A. To rewrite Terraform configuration files to a canonical format and style
+  - B. To apply changes to the infrastructure
+  - C. To initialize a working directory containing Terraform configuration files
+  - D. To destroy Terraform-managed infrastructure
+  question: What is the purpose of the 'terraform fmt' command?
+
+- answer: B
+  options:
+  - A. To mark a resource as tainted, forcing it to be destroyed and recreated on the next apply
+  - B. To remove the 'tainted' state from a resource, preventing it from being destroyed and recreated
+  - C. To import existing infrastructure into your Terraform state
+  - D. To list all resources in the Terraform state
+  question: What does the 'terraform untaint' command do?
+
+- answer: C
+  options:
+  - A. To format Terraform configuration files
+  - B. To validate the syntax of Terraform configuration files
+  - C. To import existing infrastructure into your Terraform state
+  - D. To destroy Terraform-managed infrastructure
+  question: Which command is used to import existing infrastructure into your Terraform state?
+
+- answer: D
+  options:
+  - A. To switch between different versions of Terraform
+  - B. To manage provider plugins
+  - C. To list all resources in the Terraform state
+  - D. To create, select, and manage workspaces
+  question: What is the purpose of the 'terraform workspace' command?
+
+- answer: A
+  options:
+  - A. To view and manipulate the state file
+  - B. To apply changes to the infrastructure
+  - C. To initialize a working directory containing Terraform configuration files
+  - D. To destroy Terraform-managed infrastructure
+  question: What does the 'terraform state' command allow you to do?
+
+- answer: B
+  options:
+  - A. To enable detailed output during the 'terraform plan' and 'terraform apply' commands
+  - B. To enable detailed logging for debugging purposes
+  - C. To format Terraform configuration files
+  - D. To validate the syntax of Terraform configuration files
+  question: What is the purpose of setting the 'TF_LOG' environment variable?
