@@ -1,3 +1,7 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-python3 tfquiz.py questions.yaml --total_questions $1
+python3 -m venv myenv
+source myenv/bin/activate
+pip3 install pyyaml 
+
+python3 ./tfquiz.py questions.yaml --total_questions "$1"
