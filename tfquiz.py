@@ -1,11 +1,35 @@
 import yaml
 import random
 import argparse
+import sys
+
+try:
+    import tty
+    import termios
+except ImportError:
+    import msvcrt  # Only available on Windows
 
 # Load questions from YAML file
 def load_questions(filename):
     with open(filename, 'r') as file:
         return yaml.safe_load(file)['questions']
+
+# Function to get a single character without Enter
+def get_single_character():
+    try:
+        # Unix-based systems
+        fd = sys.stdin.fileno()
+        old_settings = termios.tcgetattr(fd)
+        try:
+            tty.setraw(sys.stdin.fileno())
+            ch = sys.stdin.read(1)
+        finally:
+            termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+        return ch
+    except ImportError:
+        # Windows
+        return msvcrt.getch().decode('utf-8')
+
 
 # Quiz Function
 def run_quiz(questions, total_questions):
@@ -18,12 +42,18 @@ def run_quiz(questions, total_questions):
         print(f"Question {idx}: {question['question']}")
         for option in question['options']:
             print(option)
-        user_answer = input("Enter the letter of your answer: ").strip().upper()
+        # user_answer = input("Enter the letter of your answer: ").strip().upper()
+        print("Enter the letter of your answer: ", end='', flush=True)
+        user_answer = get_single_character().strip().upper()
         if user_answer == question['answer']:
-            print("Correct!\n")
+            print(f"\t\t {user_answer} was Correct!,\n score: {score + 1}/{len(questions)} \n")
             score += 1
         else:
-            print(f"Wrong. The correct answer was: {question['answer']}\n")
+            print(f"Wrong. The correct answer was: {question['answer']}")
+            if 'explanation' in question:
+                print(f"Explanation: {question['explanation']}\n")
+            else:
+                print()
 
     print(f"Your total score: {score}/{len(questions)}")
     print("Thank you for participating!")

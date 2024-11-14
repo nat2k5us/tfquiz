@@ -1,7 +1,9 @@
 import yaml
 from openai import OpenAI
 import os
-
+import re
+import random
+# https://github.com/openai/openai-python
 # Function to load the current questions.yaml file
 def load_questions(filename='questions.yaml'):
     try:
@@ -34,8 +36,17 @@ def generate_incorrect_answers(prompt, num_answers=3):
         )
         print(completion.choices[0].message.content)
         generated_text = completion.choices[0].message.content
-        incorrect_answers = generated_text.split("\n")[:num_answers]
-        return [answer.strip() for answer in incorrect_answers]
+        incorrect_answers = generated_text.split("\n")
+        cleaned_answers = []
+        for answer in incorrect_answers:
+        # Remove leading numbers and punctuation
+            answer = re.sub(r'^\s*\d+[\.\)]\s*', '', answer).strip()
+            if answer:
+                cleaned_answers.append(answer)
+            if len(cleaned_answers) == num_answers:
+                break
+        return cleaned_answers
+        # return [answer.strip() for answer in incorrect_answers]
     except Exception as e:
         print(f"Error generating incorrect answers: {e}")
         return []
@@ -44,6 +55,7 @@ def generate_incorrect_answers(prompt, num_answers=3):
 def add_question():
     question_text = input("Enter the question: ").strip()
     correct_answer = input("Enter the correct answer: ").strip()
+    explanation = input("Enter the explanation: ").strip()
     incorrect_prompt = (
         f"Generate three plausible but incorrect answers to the following question:\n"
         f"Question: {question_text}\n"
@@ -65,7 +77,8 @@ def add_question():
     data['questions'].append({
         'question': question_text,
         'options': [f"{chr(65 + i)}. {option}" for i, option in enumerate(options)],
-        'answer': f"{chr(65 + options.index(correct_answer))}"
+        'answer': f"{chr(65 + options.index(correct_answer))}",
+        'explanation': explanation
     })
     save_questions(data)
     print("Question added successfully!")

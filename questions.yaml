@@ -1,5 +1,6 @@
 questions:
 - answer: A
+  explanation: Terraform is primarily used for provisioning and managing infrastructure.
   options:
   - A. Provisioning infrastructure
   - B. Monitoring applications
@@ -27,7 +28,6 @@ questions:
   - C. A container image for running applications
   - D. A service for managing data pipelines
   question: What is a 'provider' in Terraform?
-
 - answer: B
   options:
   - A. Simplifies configuration syntax
@@ -35,39 +35,38 @@ questions:
   - C. Reduces the need for provider plugins
   - D. Automatically generates resource documentation
   question: What is the primary benefit of using a remote backend in Terraform?
-
 - answer: A
   options:
   - A. Encrypts sensitive data at rest and in transit
   - B. Stores sensitive data in plain text for easy access
   - C. Omits sensitive data from the state file entirely
   - D. Requires manual encryption of sensitive data by the user
-  question: How does Terraform handle sensitive information in the state file when using a remote backend?
-
+  question: How does Terraform handle sensitive information in the state file when
+    using a remote backend?
 - answer: A
   options:
-  - A. To prevent multiple users from making concurrent changes that could corrupt the state
+  - A. To prevent multiple users from making concurrent changes that could corrupt
+    the state
   - B. To encrypt the state file
   - C. To enable version control of the state file
   - D. To automate the application of infrastructure changes
   question: What is the purpose of state locking in Terraform?
-
 - answer: C
   options:
   - A. terraform plan
   - B. terraform apply
   - C. terraform refresh
   - D. terraform init
-  question: Which command is used to reconcile the Terraform state with the real-world infrastructure?
-
+  question: Which command is used to reconcile the Terraform state with the real-world
+    infrastructure?
 - answer: B
   options:
   - A. Modify the provider configuration
   - B. Remove the backend configuration block and run terraform init again
   - C. Delete the .terraform directory
   - D. Manually edit the state file
-  question: If you want to switch from using a remote backend to a local backend, what should you do?
-
+  question: If you want to switch from using a remote backend to a local backend,
+    what should you do?
 - answer: A
   options:
   - A. It can lead to multiple writers and potential state corruption
@@ -75,15 +74,14 @@ questions:
   - C. It disables state locking for all future operations
   - D. It requires reinitialization of the backend
   question: What is a potential risk of using the force-unlock command in Terraform?
-
 - answer: A
   options:
   - A. Use a backend that supports encryption at rest and in transit
   - B. Store the state file in a version control system
   - C. Manually remove sensitive data from the state file
   - D. Use the -sensitive flag when running Terraform commands
-  question: How can you ensure that sensitive data is not stored in plain text in the Terraform state file?
-
+  question: How can you ensure that sensitive data is not stored in plain text in
+    the Terraform state file?
 - answer: B
   options:
   - A. Terraform will continue the operation without locking
@@ -91,7 +89,6 @@ questions:
   - C. Terraform will automatically retry the operation
   - D. Terraform will switch to a local backend
   question: What happens if state locking fails during a Terraform operation?
-
 - answer: A
   options:
   - A. A standalone configuration that manages a specific set of resources
@@ -99,15 +96,14 @@ questions:
   - C. A graphical interface for managing infrastructure
   - D. A cloud service for storing state files
   question: What is a Terraform module?
-
 - answer: B
   options:
   - A. By specifying the module's URL in the provider block
-  - B. By using the 'module' block with the 'source' attribute pointing to the module's registry address
+  - B. By using the 'module' block with the 'source' attribute pointing to the module's
+    registry address
   - C. By importing the module using the 'terraform import' command
   - D. By copying the module's code into your configuration directory
   question: How can you source a module from the Terraform Registry?
-
 - answer: C
   options:
   - A. terraform plan
@@ -115,7 +111,6 @@ questions:
   - C. terraform init
   - D. terraform validate
   question: Which command initializes the modules in your configuration?
-
 - answer: A
   options:
   - A. To define input variables for the module
@@ -123,7 +118,6 @@ questions:
   - C. To configure backend settings
   - D. To specify provider requirements
   question: What is the purpose of the 'variables.tf' file in a module?
-
 - answer: C
   options:
   - A. By defining them in the 'provider' block
@@ -131,7 +125,6 @@ questions:
   - C. By specifying them as arguments in the 'module' block
   - D. By setting environment variables
   question: How do you pass variables to a module?
-
 - answer: C
   options:
   - A. To define the resources managed by the module
@@ -139,7 +132,6 @@ questions:
   - C. To declare the outputs that can be used by other configurations
   - D. To set default values for variables
   question: What is the function of the 'outputs.tf' file in a module?
-
 - answer: A
   options:
   - A. By referencing its path in the 'source' attribute of the 'module' block
@@ -147,7 +139,6 @@ questions:
   - C. By importing it using the 'terraform import' command
   - D. By specifying its URL in the 'provider' block
   question: How can you use a local module in your Terraform configuration?
-
 - answer: A
   options:
   - A. They allow for code reusability and organization
@@ -155,7 +146,6 @@ questions:
   - C. They provide a graphical interface for configuration
   - D. They eliminate the need for state files
   question: What is the benefit of using modules in Terraform?
-
 - answer: A
   options:
   - A. Write, Plan, Apply
@@ -163,31 +153,30 @@ questions:
   - C. Apply, Plan, Write
   - D. Write, Apply, Plan
   question: What is the correct order of the core Terraform workflow?
-
 - answer: C
   options:
   - A. terraform plan
   - B. terraform apply
   - C. terraform init
   - D. terraform destroy
-  question: Which Terraform command initializes a working directory containing configuration files?
-
+  question: Which Terraform command initializes a working directory containing configuration
+    files?
 - answer: B
   options:
   - A. terraform plan
   - B. terraform validate
   - C. terraform apply
   - D. terraform destroy
-  question: Which command checks the syntax and internal consistency of a Terraform configuration?
-
+  question: Which command checks the syntax and internal consistency of a Terraform
+    configuration?
 - answer: A
   options:
   - A. terraform plan
   - B. terraform init
   - C. terraform validate
   - D. terraform destroy
-  question: Which command creates an execution plan, showing what actions Terraform will take?
-
+  question: Which command creates an execution plan, showing what actions Terraform
+    will take?
 - answer: C
   options:
   - A. terraform plan
@@ -195,7 +184,6 @@ questions:
   - C. terraform apply
   - D. terraform destroy
   question: Which command executes the actions proposed in a Terraform plan?
-
 - answer: D
   options:
   - A. terraform plan
@@ -203,7 +191,6 @@ questions:
   - C. terraform apply
   - D. terraform destroy
   question: Which command is used to remove Terraform-managed infrastructure?
-
 - answer: B
   options:
   - A. terraform plan
@@ -211,7 +198,6 @@ questions:
   - C. terraform apply
   - D. terraform destroy
   question: Which command updates the state file with the real infrastructure?
-
 - answer: A
   options:
   - A. terraform show
@@ -219,39 +205,38 @@ questions:
   - C. terraform validate
   - D. terraform destroy
   question: Which command provides a human-readable output from a state or plan file?
-
 - answer: A
   options:
-  - A. variable "region" { description = "Cloud location" type = string default = "Australia Southeast" }
+  - A. variable "region" { description = "Cloud location" type = string default =
+    "Australia Southeast" }
   - B. var.region
   - C. terraform apply -var 'region=us-east-1'
   - D. TF_VAR_region
   question: How do you define a variable in Terraform?
-
 - answer: B
   options:
-  - A. variable "region" { description = "Cloud location" type = string default = "Australia Southeast" }
+  - A. variable "region" { description = "Cloud location" type = string default =
+    "Australia Southeast" }
   - B. var.region
   - C. terraform apply -var 'region=us-east-1'
   - D. TF_VAR_region
   question: How do you access a variable in the configuration?
-
 - answer: C
   options:
-  - A. variable "region" { description = "Cloud location" type = string default = "Australia Southeast" }
+  - A. variable "region" { description = "Cloud location" type = string default =
+    "Australia Southeast" }
   - B. var.region
   - C. terraform apply -var 'region=us-east-1'
   - D. TF_VAR_region
   question: How can you assign variables in the configuration using command-line flags?
-
 - answer: D
   options:
-  - A. variable "region" { description = "Cloud location" type = string default = "Australia Southeast" }
+  - A. variable "region" { description = "Cloud location" type = string default =
+    "Australia Southeast" }
   - B. var.region
   - C. terraform apply -var 'region=us-east-1'
   - D. TF_VAR_region
   question: How can you assign variables in the configuration using environment variables?
-
 - answer: B
   options:
   - A. Command-line flags
@@ -259,7 +244,6 @@ questions:
   - C. Variable definition files
   - D. All of the above
   question: What is the variable definition precedence in Terraform?
-
 - answer: A
   options:
   - A. Writing and executing code to define, deploy, update, and destroy infrastructure
@@ -267,7 +251,6 @@ questions:
   - C. Using a graphical interface to manage infrastructure
   - D. Outsourcing infrastructure management to third-party vendors
   question: What is Infrastructure as Code (IaC)?
-
 - answer: D
   options:
   - A. Automation
@@ -275,48 +258,44 @@ questions:
   - C. Versioning
   - D. All of the above
   question: What are the benefits of IaC?
-
 - answer: A
   options:
-  - A. It allows for provisioning and applying infrastructure configurations, saving time
+  - A. It allows for provisioning and applying infrastructure configurations, saving
+    time
   - B. It requires manual configuration of each resource
   - C. It is only compatible with a single cloud provider
   - D. It does not support version control
   question: How does using IaC make it easier to provision infrastructure?
-
 - answer: B
   options:
   - A. The ability to execute code multiple times with different outcomes
-  - B. The characteristic where applying the same code multiple times yields the same result
+  - B. The characteristic where applying the same code multiple times yields the same
+    result
   - C. The need to manually adjust configurations after each deployment
   - D. The requirement to use different code for each deployment
   question: What does 'idempotent' mean in terms of IaC?
-
-
 - answer: A
   options:
-  - A. A SaaS offering that provides collaboration and governance features for Terraform users
+  - A. A SaaS offering that provides collaboration and governance features for Terraform
+    users
   - B. A command-line tool for managing infrastructure
   - C. A plugin for integrating Terraform with cloud providers
   - D. A desktop application for designing infrastructure diagrams
   question: What is Terraform Cloud?
-
-- answer: B
+- answer: A
   options:
   - A. A self-hosted version of Terraform Cloud with additional enterprise features
   - B. A command-line tool for managing infrastructure
   - C. A plugin for integrating Terraform with cloud providers
   - D. A desktop application for designing infrastructure diagrams
   question: What is Terraform Enterprise?
-
-- answer: D
+- answer: A
   options:
   - A. Remote state management
   - B. Policy as code with Sentinel
   - C. Private module registry
   - D. All of the above
   question: Which features are available in both Terraform Cloud and Terraform Enterprise?
-
 - answer: A
   options:
   - A. Single sign-on (SSO) integration
@@ -324,7 +303,6 @@ questions:
   - C. Policy as code with Sentinel
   - D. Private module registry
   question: Which feature is exclusive to Terraform Enterprise?
-
 - answer: C
   options:
   - A. Remote state management
@@ -332,7 +310,6 @@ questions:
   - C. Self-hosted deployment
   - D. Private module registry
   question: Which feature is exclusive to Terraform Enterprise?
-
 - answer: B
   options:
   - A. Remote state management
@@ -340,7 +317,6 @@ questions:
   - C. Private module registry
   - D. All of the above
   question: Which features are available in bo
-
 - answer: A
   options:
   - A. A declarative tool for defining and provisioning infrastructure
@@ -348,7 +324,6 @@ questions:
   - C. A monitoring tool for cloud resources
   - D. A database management system
   question: What is Terraform?
-
 - answer: B
   options:
   - A. An imperative programming language
@@ -356,23 +331,22 @@ questions:
   - C. A markup language
   - D. A compiled programming language
   question: What type of language is HashiCorp Configuration Language (HCL)?
-
 - answer: C
   options:
   - A. terraform plan
   - B. terraform apply
   - C. terraform init
   - D. terraform destroy
-  question: Which command initializes a working directory containing Terraform configuration files?
-
+  question: Which command initializes a working directory containing Terraform configuration
+    files?
 - answer: A
   options:
   - A. terraform plan
   - B. terraform apply
   - C. terraform init
   - D. terraform destroy
-  question: Which command creates an execution plan, showing what actions Terraform will take?
-
+  question: Which command creates an execution plan, showing what actions Terraform
+    will take?
 - answer: B
   options:
   - A. terraform plan
@@ -380,7 +354,6 @@ questions:
   - C. terraform init
   - D. terraform destroy
   question: Which command executes the actions proposed in a Terraform plan?
-
 - answer: D
   options:
   - A. terraform plan
@@ -388,39 +361,38 @@ questions:
   - C. terraform init
   - D. terraform destroy
   question: Which command is used to remove Terraform-managed infrastructure?
-
 - answer: A
   options:
   - A. Providers
   - B. Modules
   - C. Resources
   - D. Variables
-  question: In Terraform, what is responsible for understanding API interactions and exposing resources?
-
+  question: In Terraform, what is responsible for understanding API interactions and
+    exposing resources?
 - answer: C
   options:
   - A. Providers
   - B. Modules
   - C. Resources
   - D. Variables
-  question: In Terraform, what is the primary construct that defines one or more infrastructure objects?
-
+  question: In Terraform, what is the primary construct that defines one or more infrastructure
+    objects?
 - answer: A
   options:
-  - A. Provisioning your infrastructure into multiple cloud providers to increase fault-tolerance of your applications
+  - A. Provisioning your infrastructure into multiple cloud providers to increase
+    fault-tolerance of your applications
   - B. Using a single cloud provider to manage all infrastructure
   - C. Deploying applications without any cloud infrastructure
   - D. Utilizing on-premises servers exclusively
   question: What is multi-cloud deployment?
-
 - answer: A
   options:
-  - A. It allows a single configuration to be used to manage multiple providers and handle cross-cloud dependencies
+  - A. It allows a single configuration to be used to manage multiple providers and
+    handle cross-cloud dependencies
   - B. It restricts configurations to a single cloud provider
   - C. It requires manual adjustments for each cloud provider
   - D. It is incompatible with hybrid cloud environments
   question: What does 'cloud-agnostic' mean in terms of provisioning tools?
-
 - answer: A
   options:
   - A. Yes
@@ -428,15 +400,14 @@ questions:
   - C. Only with specific plugins
   - D. Only in certain regions
   question: Is Terraform cloud-agnostic?
-
 - answer: A
   options:
-  - A. It simplifies management and orchestration, helping operators build large-scale multi-cloud infrastructures
+  - A. It simplifies management and orchestration, helping operators build large-scale
+    multi-cloud infrastructures
   - B. It limits deployment to a single cloud provider
   - C. It complicates cross-cloud management
   - D. It requires separate configurations for each provider
   question: What is the benefit of Terraform being cloud-agnostic?
-
 - answer: A
   options:
   - A. A file that records information about what infrastructure Terraform created
@@ -444,7 +415,6 @@ questions:
   - C. A log of user activities within Terraform
   - D. A backup of the Terraform configuration files
   question: What is the Terraform State?
-
 - answer: A
   options:
   - A. Mapping Terraform configurations to real-world resources
@@ -452,7 +422,6 @@ questions:
   - C. Logging errors during Terraform execution
   - D. Managing Terraform plugins
   question: What is the purpose of the Terraform State?
-
 - answer: A
   options:
   - A. terraform.tfstate
@@ -460,7 +429,6 @@ questions:
   - C. terraform.config
   - D. terraform.log
   question: What is the default name of the Terraform state file?
-
 - answer: A
   options:
   - A. To rewrite Terraform configuration files to a canonical format and style
@@ -468,23 +436,23 @@ questions:
   - C. To initialize a working directory containing Terraform configuration files
   - D. To destroy Terraform-managed infrastructure
   question: What is the purpose of the 'terraform fmt' command?
-
 - answer: B
   options:
-  - A. To mark a resource as tainted, forcing it to be destroyed and recreated on the next apply
-  - B. To remove the 'tainted' state from a resource, preventing it from being destroyed and recreated
+  - A. To mark a resource as tainted, forcing it to be destroyed and recreated on
+    the next apply
+  - B. To remove the 'tainted' state from a resource, preventing it from being destroyed
+    and recreated
   - C. To import existing infrastructure into your Terraform state
   - D. To list all resources in the Terraform state
   question: What does the 'terraform untaint' command do?
-
 - answer: C
   options:
   - A. To format Terraform configuration files
   - B. To validate the syntax of Terraform configuration files
   - C. To import existing infrastructure into your Terraform state
   - D. To destroy Terraform-managed infrastructure
-  question: Which command is used to import existing infrastructure into your Terraform state?
-
+  question: Which command is used to import existing infrastructure into your Terraform
+    state?
 - answer: D
   options:
   - A. To switch between different versions of Terraform
@@ -492,7 +460,6 @@ questions:
   - C. To list all resources in the Terraform state
   - D. To create, select, and manage workspaces
   question: What is the purpose of the 'terraform workspace' command?
-
 - answer: A
   options:
   - A. To view and manipulate the state file
@@ -500,11 +467,365 @@ questions:
   - C. To initialize a working directory containing Terraform configuration files
   - D. To destroy Terraform-managed infrastructure
   question: What does the 'terraform state' command allow you to do?
-
 - answer: B
   options:
-  - A. To enable detailed output during the 'terraform plan' and 'terraform apply' commands
+  - A. To enable detailed output during the 'terraform plan' and 'terraform apply'
+    commands
   - B. To enable detailed logging for debugging purposes
   - C. To format Terraform configuration files
   - D. To validate the syntax of Terraform configuration files
   question: What is the purpose of setting the 'TF_LOG' environment variable?
+- answer: C
+  options:
+  - A. boolean
+  - B. integer
+  - C. list
+  - D. string
+  question: Which of the following is the primitive type constraint in Terraform?
+- answer: D
+  options:
+  - A. Traditional approaches rely heavily on manual processes which slow down deployment
+    speeds in large-scale systems.
+  - B. Large-scale systems require frequent hardware upgrades that traditional management
+    cannot efficiently accommodate.
+  - C. The traditional approach focuses on centralized management, which reduces flexibility
+    in distributed environments.
+  - D. To manage a lot of infrastructure terraform makes it easy
+  question: Why does the traditional approach of managing infrastructure not go well
+    with large-scale, distributed systems architectures?
+- answer: D
+  options:
+  - A. - False, Terraform indicates that using provisioners slows down the provisioning
+    process compared to configuration management tools.
+  - B. - False, Terraform recommends using provisioners only when configuration management
+    tools are not available.
+  - C. - False, Terraform suggests that configuration management tools are the preferred
+    method for invoking scripts or installing software on newly built VMs.
+  - D. True
+  question: Terraform recommends using provisioners instead of configuration management
+    tools to invoke scripts or install software on newly built VMs.
+- answer: D
+  explanation: "When you use the `count` parameter on a resource, that resource becomes\
+    \ a list of resources. Unfortunately, Terraform identifies each resource in the\
+    \ list by its position (index). After running `terraform apply` the first time\
+    \ with three user names, Terraform\u2019s internal representation looks like:\n\
+    \n```\naws_iam_user.quiz_experts_user[0]: Creation complete after 3s [id=Peter]\n\
+    aws_iam_user.quiz_experts_user[1]: Creation complete after 3s [id=Chris]\naws_iam_user.quiz_experts_user[2]:\
+    \ Creation complete after 3s [id=Stewie]\n```\n\nWhen you remove or add items,\
+    \ subsequent items shift positions. After changing to two user names, Terraform\u2019\
+    s representation becomes:\n\n```\naws_iam_user.quiz_experts_user[0]: Refreshing\
+    \ state... [id=Peter]\naws_iam_user.quiz_experts_user[1]: Refreshing state...\
+    \ [id=Brian]\n```\n\nThe complete `terraform apply` output is:\n\n```\n$ terraform\
+    \ apply\naws_iam_user.quiz_experts_user[0]: Refreshing state... [id=Peter]\naws_iam_user.quiz_experts_user[1]:\
+    \ Refreshing state... [id=Chris]\naws_iam_user.quiz_experts_user[2]: Refreshing\
+    \ state... [id=Stewie]\n\nAn execution plan has been generated and is shown below.\n\
+    Resource actions are indicated with the following symbols:\n  ~ update in-place\n\
+    \  - destroy\n\nTerraform will perform the following actions:\n\n  # aws_iam_user.quiz_experts_user[1]\
+    \ will be updated in-place\n  ~ resource \"aws_iam_user\" \"quiz_experts_user\"\
+    \ {\n        arn           = \"arn:aws:iam::123456789012:user/Chris\"\n      \
+    \  force_destroy = false\n        id            = \"Chris\"\n      ~ name    \
+    \      = \"Chris\" -> \"Brian\"\n        path          = \"/\"\n        tags \
+    \         = {}\n        unique_id     = \"AID1234567890EXAMPLE\"\n    }\n\n  #\
+    \ aws_iam_user.quiz_experts_user[2] will be destroyed\n  - resource \"aws_iam_user\"\
+    \ \"quiz_experts_user\" {\n      - arn           = \"arn:aws:iam::123456789012:user/Stewie\"\
+    \ -> null\n      - force_destroy = false -> null\n      - id            = \"Stewie\"\
+    \ -> null\n      - name          = \"Stewie\" -> null\n      - path          =\
+    \ \"/\" -> null\n      - tags          = {} -> null\n      - unique_id     = \"\
+    AID0987654321EXAMPLE\" -> null\n    }\n\nPlan: 0 to add, 1 to change, 1 to destroy.\n\
+    \nDo you want to perform these actions?\n  Terraform will perform the actions\
+    \ described above.\n  Only 'yes' will be accepted to approve.\n\n  Enter a value:\
+    \ yes\n\naws_iam_user.quiz_experts_user[2]: Destroying... [id=Stewie]\naws_iam_user.quiz_experts_user[1]:\
+    \ Modifying... [id=Chris]\naws_iam_user.quiz_experts_user[2]: Destruction complete\
+    \ after 3s\naws_iam_user.quiz_experts_user[1]: Modifications complete after 4s\
+    \ [id=Brian]\n\nApply complete! Resources: 0 added, 1 changed, 1 destroyed.\n\
+    ```\n"
+  options:
+  - A. Terraform will stop managing users Chris and Stewie, and a new user named Brian
+    will be created.
+  - B. Stewie will no longer exist, and Chris will be renamed to Brian.
+  - C. User Chris and Stewie will not get deleted, and a new user named Brian will
+    be created.
+  - D. User Chris and Stewie will get deleted, and a new user named Brian will be
+    created.
+  question: "Lois used the configuration given below and created three users\u2014\
+    Peter, Chris, and Stewie\u2014provided with a default value of the `user_names`\
+    \ variable:\n\n```hcl\nvariable \"user_names\" {\n  description = \"Create IAM\
+    \ users\"\n  type        = list(string)\n  default     = [\"Peter\", \"Chris\"\
+    , \"Stewie\"]\n}\n\nresource \"aws_iam_user\" \"quiz_experts_user\" {\n  count\
+    \ = length(var.user_names)\n  name  = var.user_names[count.index]\n}\n```\n\n\
+    What would happen if Lois uses the `terraform apply` command after changing the\
+    \ default value as shown below?\n\n```hcl\nvariable \"user_names\" {\n  description\
+    \ = \"Create IAM users\"\n  type        = list(string)\n  default     = [\"Peter\"\
+    , \"Brian\"]\n}\n\nresource \"aws_iam_user\" \"quiz_experts_user\" {\n  count\
+    \ = length(var.user_names)\n  name  = var.user_names[count.index]\n}\n```\n"
+- answer: D
+  explanation: Terraform requires some sort of database to map Terraform configuration
+    to the real world. When you have a resource resource "aws_instance" "quiz_experts"
+    in your configuration, Terraform uses this map to know that instance i-abcd1234
+    is represented by that resource. Alongside the mappings between resources and
+    remote objects, Terraform also tracks metadata, such as resource dependencies,
+    and records it in state files. Terraform typically uses the configuration to determine
+    the dependency order. However, when you delete a resource from a Terraform configuration,
+    Terraform must know how to delete that resource. Terraform can see that a mapping
+    exists for a resource, not in your configuration, and plan to destroy it. However,
+    since the configuration no longer exists, the order cannot be determined from
+    the configuration alone. To ensure correct operation, Terraform retains a copy
+    of the most recent set of dependencies within the state. Now Terraform can still
+    determine the correct order for destruction from the state when you delete one
+    or more items from the configuration.
+  options:
+  - A. Terraform will not be able to determine the correct order for destruction and
+    will fail to delete the resources.'
+  - B. Terraform relies on the original configuration file to determine what resources
+    to delete, regardless of any updates or deletions made to the file after the initial
+    execution.
+  - C. Terraform uses a built-in algorithm that randomly selects resources to delete
+    without considering the dependencies or the current state of the configuration.
+  - D. Terraform retains a copy of the most recent set of dependencies within the
+    state. Even if you delete one or more items from the configuration, Terraform
+    can still determine what to delete and the correct order for destruction from
+    the state.
+  question: You delete one or more resources from a Terraform configuration file since
+    the configuration no longer exists. How does Terraform determine what resources
+    it should delete and in which order?
+- answer: D
+  explanation: A new provider can be added to a configuration -- either explicitly
+    via a provider block or by adding a resource from that provider -- Terraform must
+    initialize it before it can be used. Initialization downloads and installs the
+    provider's plugin so that it can later be executed. hcl```terraform init``` command
+    will download and initialize any providers that are not already initialized.
+  options:
+  - A. Terraform will not be able to add provider plugins to the configuration.
+  - B. You can add a provider by simply mentioning it in the variables section of
+    your Terraform configuration file, and Terraform will automatically configure
+    it during runtime.
+  - C. To add a provider, you need to first create a dedicated Python script that
+    specifies all the necessary configurations, and then execute that script before
+    running Terraform commands.
+  - D. You can add a provider by specifying it in the provider block and then running
+    terraform init to download the provider.
+  question: How to add provider to Terraform configuration?
+- answer: B
+  explanation: 'A primitive type is a simple type that isn''t made from any other
+    type. All primitive types in Terraform are represented by a type keyword. The
+    available primitive types are:string: a sequence of Unicode characters representing
+    some text, such as "hello".number: a numeric value. The number type can represent
+    both whole numbers like 15 and fractional values such as 6.283185.bool: either
+    true or false. bool values can be used in conditional logic.'
+  options:
+  - A. array and map
+  - B. bool and string
+  - C. int and float
+  - D. list and object
+  question: Which of the following is the primitive type constraint in Terraform?
+- answer: D
+  explanation: "Named workspaces allow conveniently switching between multiple instances\
+    \ of a single configuration within its single backend. They are convenient in\
+    \ a number of situations, but cannot solve all problems.\n\nA common use for multiple\
+    \ workspaces is to create a parallel, distinct copy of a set of infrastructure\
+    \ in order to test a set of changes before modifying the main production infrastructure.\
+    \ For example, a developer working on a complex set of infrastructure changes\
+    \ might create a new temporary workspace in order to freely experiment with changes\
+    \ without affecting the default workspace.\n\nOrganisations commonly want to create\
+    \ a strong separation between multiple deployments of the same infrastructure\
+    \ serving different development stages (e.g., staging vs. production) or different\
+    \ internal teams. In this case, the backend used for each deployment often belongs\
+    \ to that deployment, with different credentials and access controls. Named workspaces\
+    \ are not a suitable isolation mechanism for this scenario because each subsystem\
+    \ should have its own separate configuration and backend and will thus have its\
+    \ own distinct set of workspaces.\n\n```bash\n$ tree\n.\n\u251C\u2500\u2500 assets\n\
+    \u2502   \u2514\u2500\u2500 index.html\n\u251C\u2500\u2500 prod  # Separate directory\
+    \ for production deployment \n\u2502   \u251C\u2500\u2500 main.tf\n\u2502   \u251C\
+    \u2500\u2500 variables.tf\n\u2502   \u251C\u2500\u2500 terraform.tfstate\n\u2502\
+    \   \u2514\u2500\u2500 terraform.tfvars\n\u2514\u2500\u2500 dev   # Separate directory\
+    \ for development deployment \n    \u251C\u2500\u2500 main.tf\n    \u251C\u2500\
+    \u2500 variables.tf\n    \u251C\u2500\u2500 terraform.tfstate\n    \u2514\u2500\
+    \u2500 terraform.tfvars\n```\n"
+  options:
+  - A. Combine all development and production deployments into a single working directory
+    to simplify management and reduce resource usage, relying on naming conventions
+    to distinguish between different environments.
+  - B. Continuously deploy changes from development directly to production to ensure
+    that all users always have access to the latest features, while relying on automated
+    testing to catch any potential issues.
+  - C. Use a single configuration file for both development and production environments,
+    making it easier to apply changes across deployments without worrying about keeping
+    them separate.
+  - D. Use separate working directories for each deployment. Each working directory
+    should have its own separate deployment-specific configuration and backend with
+    different credentials and access controls.
+  question: 'Your manager has asked you to create a strong separation between development
+    and production deployments to ensure users will only touch the intended infrastructure.
+    A modification made to one deployment shouldn''t affect another. Which of the
+    following strategies do you believe is the best one?
+
+    '
+- answer: D
+  explanation: 'To disable, either unset it or set it to empty. ```bash # Set it to
+    empty export TF_LOG= OR # Unset it unset TF_LOG OR # Set it to off export TF_LOG=off
+    ```'
+  options:
+  - A. Archives the current log files for future reference
+  - B. Enables detailed logs for troubleshooting
+  - C. Sets a new logging level to verbose mode
+  - D. disables detailed logs
+  question: What does the below-given command do?export TF_LOG=
+- answer: D
+  explanation: "A structural type allows multiple values of several distinct types\
+    \ to be grouped together as a single value. Structural types require a schema\
+    \ as an argument, to specify which types are allowed for which elements. ```bash\
+    \ Object object(...): A collection of named attributes that each have their own\
+    \ type. The schema for object types is { <KEY> = <TYPE>, <KEY> = <TYPE>, ... }\
+    \ \u2014 a pair of curly braces containing a comma-separated series of <KEY> =\
+    \ <TYPE> pairs. Values that match the object type must contain all of the specified\
+    \ keys, and the value for each key must match its specified type. (Values with\
+    \ additional keys can still match an object type, but the extra attributes are\
+    \ discarded during type conversion.) For Example: An object type of object({ name=string,\
+    \ age=number }) would match a value like the following: { name = \"John\" age\
+    \  = 52 } Tuple tuple(...): A sequence of elements identified by consecutive whole\
+    \ numbers starting with zero, where each element has its own type. The schema\
+    \ for tuple types is [<TYPE>, <TYPE>, ...] \u2014 a pair of square brackets containing\
+    \ a comma-separated series of types. Values that match the tuple type must have\
+    \ exactly the same number of elements (no more and no fewer), and the value in\
+    \ each position must match the specified type for that position. For Example:\
+    \ A tuple type of tuple([string, number, bool]) would match a value like the following:\
+    \ [\"a\", 15, true] NOTE:  (List vs Tuple)  A list is a sequence that contains\
+    \ elements of the same type eg list(string) or list(number), whereas a tuple is\
+    \ a sequence that can contain elements of any type as long as you define the type\
+    \ of each element. eg tuple([string, number, bool]) . ```"
+  options:
+  - A. Boolean and Dictionary
+  - B. List and Float
+  - C. String and Integer
+  - D. Tuple and Object
+  question: Which of the following variable types allows multiple values of several
+    distinct types to be grouped together as a single value?
+- answer: D
+  explanation: 'when to use local values
+
+    ```bash Local values can be helpful to avoid repeating the same values or expressions
+    multiple times in a configuration, but if overused, they can also make a configuration
+    hard to read by future maintainers by hiding the actual values used. A local value
+    assigns a name to an expression, so you can use the name multiple times within
+    a module instead of repeating the expression. If you''re familiar with traditional
+    programming languages, it can be useful to compare Terraform modules to function
+    definitions: Input variables are like function arguments. Output values are like
+    function return values. Local values are like a function''s temporary local variables.
+    Use local values only in moderation, in situations where a single value or result
+    is used in many places and that value is likely to be changed in the future. The
+    ability to easily change the value in a central place is the key advantage of
+    local values. NOTE: For brevity, local values are often referred to as just "locals"
+    when the meaning is clear from context.
+
+    ``` '
+  options:
+  - A.  Create a separate Terraform module for each resource type, which will help
+    in managing tags but requires duplication of the tag definition in each module.
+  - B.  Manually copy and paste tags into each resource block to ensure consistency
+    across the configuration.
+  - C.  Use inline comments to describe each resource individually, which will allow
+    for better organization within the configuration.
+  - D. Use local values
+  question: Peter is writing a module that creates VPC, subnets, security groups,
+    route tables, and NAT gateways. All of these resources must have some common team-specific
+    tags; therefore, what strategy other than repeatedly declaring the same tags could
+    Peter use to make the Terraform configuration more readable and easier to change
+    in the future?
+- answer: C
+  explanation: Now, as we're making a transition to a cloud environment, which is
+    predominantly API-driven, the scale of infrastructure is much larger and more
+    elastic. Instead of a handful of large instances, we might have many smaller instances,
+    so there are many more things we need to provision, and this infrastructure tends
+    to be cyclic. We might scale up to handle a load during a peak day and then scale
+    down at night to save on cost because it's not a fixed cost. Unlike owning hardware,
+    we're now paying by the hour. So, it makes sense to only use the infrastructure
+    you need. You have to have this elasticity if you are using the traditional approach
+    to handle the elastic nature of infrastructure. You have to file a thousand tickets
+    every morning to spin up to peak capacity, then file another thousand tickets
+    at night to spin back down, and then manually manage all of this. It slows down
+    the process, and pointing and clicking are prone to human error.
+  options:
+  - "A. The traditional approach can\u2019t keep up with the higher elasticity of\
+    \ infrastructure, where resources   might live for days to weeks instead of months\
+    \ to years."
+  - B. The traditional approach relies on fixed hardware configurations, which simplifies
+    the management of distributed systems by reducing the need for constant updates
+    and changes.
+  - C. Logging into an administrative console or management portal and pointing and
+    clicking to provision large infrastructure is slow and prone to human error.
+  - D. Traditional management techniques are designed for cloud environments and easily
+    scale to handle thousands of distributed nodes without additional complexity.
+  question: Why does the traditional approach of managing infrastructure not go well
+    with large-scale, distributed systems architectures? Choose THREE correct answers.
+- answer: A
+  explanation: 'Why state locking?
+
+    Storing the state remotely lets you collaborate smoothly. It allows each of your
+    team members to access the latest state files, but it also brings a risk of accidental
+    state file corruption, especially when two team members are running Terraform
+    at the same time you may run into race conditions as multiple terraform apply
+    commands make concurrent updates to the same state files, leading to conflicts
+    and data loss, and state file corruption. Terraform state lock, a feature that
+    prevents opening a state file while already in use, will resolve this problem.
+    Please note that not all backends support locking. If your backend supports it
+    and is enabled, Terraform will lock your state for all operations that could write
+    state. This prevents others from acquiring the lock and potentially corrupting
+    your state.
+
+    State lock, a feature that prevents opening a state file while already in use,
+    will resolve this problem. Please note that not all backends support locking.
+    If your backend supports it and is enabled, Terraform will lock your state for
+    all operations that could write state. This prevents others from acquiring the
+    lock and potentially corrupting your state.'
+  options:
+  - A. Using a DynamoDB database, enable Terraform state locking for the Amazon S3
+    backend to prevent racing around the condition and concurrent execution issues
+    of the same Terraform setup.
+  - B. Add an outbound rate limit in ip-tables of the server running Terraform CLI.
+  - C. Use Terraform workspaces to handle conflicts and inconsistencies in shared
+    states, as each workspace has a unique state file.
+  - D. Add a rate-limiting rule to allow the Amazon S3 bucket to accept only one request
+    for a predetermined amount of time.
+  question: There have been several conflicts and irregularities in the Terraform-managed
+    infrastructure ever since you started utilizing Amazon S3 as the backend. You
+    troubleshooted and found that this occurs only when many users attempt to utilize
+    Terraform to make modifications to the infrastructure. How are you going to solve
+    it?
+- answer: A
+  explanation: RANDOM and TRACE are the most verbose
+  options:
+  - A.  export TF_LOG="RANDOM" export TF_LOG_PATH="terraform.txt" OR export TF_LOG="TRACE"
+    export TF_LOG_PATH="terraform.txt"
+  - B. export TF_LOG="DEBUG" export TF_LOG_PATH="terraform.txt"
+  - C. export TF_LOG="TRACE" export TF_FILE="terraform.txt"
+  - D. export TF_LOG="TRACE" export TF_LOG_FILE="terraform.txt"
+  question: Which of the following settings allows logs to be sent to a file and be
+    the most verbose? Choose TWO correct answers.
+- answer: C
+  explanation: 'The expression of a local value can refer to other locals, but as usual
+    reference cycles are not allowed. That is, a local cannot refer to itself or to
+    a variable that refers (directly or indirectly) back to it.
+    Example:
+    ```hcl
+      locals {
+        # Common tags to be assigned to all resources
+        common_tags = {
+          Service = local.service_name
+          Owner   = local.owner
+        }
+      }
+      
+      resource "aws_instance" "example" {
+        # ...
+      
+        tags = local.common_tags
+      }
+      ```'
+  options:
+  - A. No, local values are isolated and cannot reference other locals within their
+    scope.
+  - B. No, local values can only refer to global values and cannot interact with each
+    other.
+  - C. Yes
+  - D. Yes, but only if they are defined in the same function scope.
+  question: Can the expression of a local value refer to other locals?
